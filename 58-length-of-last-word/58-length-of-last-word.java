@@ -1,9 +1,13 @@
 class Solution {
     public int lengthOfLastWord(String s) {
-        String sArray[] = s.split(" ");    // first convert string into Array
-        String sArray2[] = sArray[sArray.length-1].split("");  
-        // convert last string into array
-        return sArray2.length; // returning the length of last.
-         
+        int temp = 0;
+        
+        for(int i = s.length() - 1; i >= 0; i--) {
+            
+            if(s.charAt(i) != ' ') temp++;
+            else if(temp > 0) return temp;
+        }
+        return temp;
     }
 }
+

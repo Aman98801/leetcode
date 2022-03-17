@@ -14,3 +14,20 @@ class Solution {
         return false;
     }
 }
+
+/*
+2nd logic ..
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        
+        if(sentence.length() < 26) return false;
+        
+        for(int i = 0; i < 26; i++) {
+            if(sentence.indexOf(alphabet.charAt(i)) == -1) return false;
+        }
+        return true;
+    }
+}
+
+*/

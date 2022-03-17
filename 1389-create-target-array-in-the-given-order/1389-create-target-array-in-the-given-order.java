@@ -4,8 +4,7 @@ class Solution {
         if (nums.length == 1) return nums;
        List<Integer> list = new ArrayList<>(nums.length);
         for (int i = 0; i < nums.length; i++) {
-            int ptr = index[i];
-            list.add(ptr,nums[i]);
+            list.add(index[i],nums[i]);
         }
         
         int[] target = new int[nums.length];

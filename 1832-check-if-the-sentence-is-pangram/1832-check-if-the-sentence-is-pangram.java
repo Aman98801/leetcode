@@ -2,7 +2,7 @@ class Solution {
     public boolean checkIfPangram(String sentence) {
         
         char[] str = sentence.toCharArray();
-        System.out.println(Arrays.toString(str));
+        // System.out.println(Arrays.toString(str));
         Set<Character> s = new HashSet<>();
         
         for(char i : str){

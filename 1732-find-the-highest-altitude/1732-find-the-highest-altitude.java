@@ -11,11 +11,9 @@ class Solution {
             sum = sum + i;
             altitude[index] = sum;
             _max = Math.max(_max,sum);
-            index++;
-            
-        }
-         
-        System.out.println(Arrays.toString(altitude));
+            index++;    
+        }  
+        // System.out.println(Arrays.toString(altitude));
         return _max;
     }
 }

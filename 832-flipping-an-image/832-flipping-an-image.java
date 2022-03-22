@@ -1,6 +1,6 @@
 class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
-      int invertArray[][] = new int[image.length][];
+      int reverseArray[][] = new int[image.length][];
         int count = 0;
       for(int subArray[] : image){
           
@@ -16,11 +16,9 @@ class Solution {
               if(subArray[j] == 1) subArray[j] = 0;
               else subArray[j] = 1;
           }
-          
-          
-          invertArray[count]= subArray;
+          reverseArray[count]= subArray;
           count++; 
       }
-        return invertArray;
+        return reverseArray;
     }
 }

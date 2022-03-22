@@ -1,9 +1,10 @@
 class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
-      int invertArray[][] = new int[image.length][];
+      int reverseArray[][] = new int[image.length][];
         int count = 0;
       for(int subArray[] : image){
           
+          // fliping array logic means Array reverse.....
           
           int start=0; int end = subArray.length-1;
           while(start <= end){
@@ -14,15 +15,16 @@ class Solution {
               end--;
           }
           
+          // inverting image logic means 1 --> 0  && 0 ---> 1
           for(int j=0;j<subArray.length;j++){
               if(subArray[j] == 1) subArray[j] = 0;
               else subArray[j] = 1;
           }
           
           
-          invertArray[count]= subArray;
+          reverseArray[count]= subArray;
           count++; 
       }
-        return invertArray;
+        return reverseArray;
     }
 }

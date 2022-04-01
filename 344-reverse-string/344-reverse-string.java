@@ -1,7 +1,6 @@
 class Solution {
     public void reverseString(char[] s) {
      
-    /*
       int start = 0;
       int end = s.length-1;
         
@@ -15,7 +14,8 @@ class Solution {
          for(char i : s){
             System.out.println(i);
         }
-        */
+        
+        /*
         
         // second logic 
         
@@ -38,6 +38,7 @@ class Solution {
            s[i] = result[i];
         }
         
+        */
         
     }
     

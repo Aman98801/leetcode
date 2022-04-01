@@ -10,12 +10,12 @@ class Solution {
             s[end] = temp;
             start++;
             end--;
-        }
-         for(char i : s){
-            System.out.println(i);
-        }
-        
-        /*
+        }  
+ }
+    
+}
+
+  /*
         
         // second logic 
         
@@ -39,7 +39,3 @@ class Solution {
         }
         
         */
-        
-    }
-    
-}

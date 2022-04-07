@@ -1,40 +1,10 @@
 class Solution {
-    public int lastStoneWeight(int[] stones) {
-        
-        List<Integer> list = new ArrayList<>();
-        
-        for(int i : stones) list.add(i);
-        
-        return Solution(list);
-        
+    public static int lastStoneWeight(int[] stones) {
+    Arrays.sort(stones);
+    for(int i=stones.length-1; i>0; i--) {
+      stones[i-1] = stones[i] - stones[i-1];
+      Arrays.sort(stones);
     }
-    public int Solution(List<Integer> list){
-        
-        System.out.println(list);
-        if(list.size() == 0) return 0;
-        else if(list.size() == 1)return list.get(0);
-        else{
-            int len = list.size();
-            Collections.sort(list);
-            
-            int x = list.get(len-2);
-            int y = list.get(len-1);
-            
-            if(x == y){
-                list.remove(len-2);
-                list.add(y-x);
-                list.remove(len-2);
-            }
-            else{
-                list.remove(len-2);
-                list.add(y-x);
-                list.remove(len-2);
-            }
-            
-            int x1 = Solution(list);
-            
-            return x1;
-        }
-        
-    }
+    return stones[0];
+  }
 }

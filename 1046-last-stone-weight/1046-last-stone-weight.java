@@ -17,8 +17,6 @@ class Solution {
             int len = list.size();
             Collections.sort(list);
             
-            // System.out.println(list);
-            
             int x = list.get(len-2);
             int y = list.get(len-1);
             
@@ -40,15 +38,3 @@ class Solution {
         
     }
 }
-
-/*
-    if(x == y){
-                list.remove(len-1);
-                list.remove(len-1);
-            }
-            else{
-               list.remove(len-1);
-               y = y-x;
-               list.add(len-1,y);
-            }
-*/

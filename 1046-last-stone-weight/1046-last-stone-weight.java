@@ -29,10 +29,8 @@ class Solution {
             }
             else{
                 list.remove(len-2);
-                // System.out.println(list);
                 list.add(y-x);
                 list.remove(len-2);
-                // System.out.println(list);
             }
             
             int x1 = Solution(list);

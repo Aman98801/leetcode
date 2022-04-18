@@ -14,9 +14,10 @@ class Solution {
         }
         Arrays.sort(mergedArray);
         
+        // Here we have to typecast the value when we are adding two values for ex in line 20 we are getting 5 / 2  so first we have to make any of one value double then assign in median variable.
         double median = 0.0;
         if(mergedArray.length % 2 == 0){
-            median = (double)(mergedArray[(n/2)-1]+mergedArray[(n/2)+1-1])/2;
+            median = (mergedArray[(n/2)-1]+mergedArray[(n/2)+1-1])/(double)2;
         } 
         else{
            median = mergedArray[((n+1)/2)-1]; 

@@ -8,9 +8,6 @@ class Solution {
             mul = mul * r;
             n = n / 10;
         }
-        
-        return (mul - sum);
-        
-        
+       return (mul - sum);     
     }
 }

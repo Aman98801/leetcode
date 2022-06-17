@@ -1,13 +1,26 @@
 class Solution {
     public int subtractProductAndSum(int n) {
-        int sum = 0, mul = 1, r;
+        int x = productOfDigits(n);
+        int y = sumOfDigits(n);
+        
+        return x-y;
+    }
+    public int productOfDigits(int n){
+        int product = 1;
         
         while(n > 0){
-            r = n % 10;
-            sum = sum+r;
-            mul = mul * r;
-            n = n / 10;
+            product = product*(n % 10);
+            n = n/10;
         }
-       return (mul - sum);     
+        return product;
+    }
+    public int sumOfDigits(int n){
+        int sum = 0;
+        
+        while(n > 0){
+            sum = sum + (n % 10);
+            n = n /10;
+        }
+        return sum;
     }
 }

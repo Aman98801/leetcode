@@ -6,7 +6,7 @@ class Solution {
             int sum  = 0;
             for(int j : i) sum += j;
             
-            if(sum > maxWealth) maxWealth = sum;
+            maxWealth = Math.max(sum,maxWealth);
         }
         return maxWealth;
     }

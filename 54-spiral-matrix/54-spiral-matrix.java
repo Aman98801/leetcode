@@ -48,3 +48,50 @@ class Solution {
        
    }
 }
+
+/*
+  Logic:
+          1. Take 4 pointers
+             top (help to move top to down --> row changing)
+             down(help to move down to top --> row changing)
+             
+             left (help to move left to right --> column change)
+             right(help to move right to left --> column change)
+             
+           2. Take a direction pointer to help tell direction
+           
+           dirPtr = 0 means  --->   this direction
+           dirPtr = 1 means  downword arrow direction
+           
+           dirPtr = 2 means  <--- this direction moves
+           dirPtr = 3 means upword arrow direction
+           
+           and then we have write loops
+           
+      At dir = 0  1.print 1 row so range of loop[left to right]
+                    row++;
+             
+      At dir = 1  2. Print last column element row changing    
+                     column const
+             
+                     loop range [row to down]
+                     right --;
+             
+      At dir = 2  3. print right to left at last row
+                    
+                     loop range [right to left]
+                     down--;
+        
+      At dir = 3  4. print down to up rows
+             
+                     loop range [down to top]
+                     left++;
+                     
+         At last ( dir + 1) % 4
+         
+            -- first  dirPtr = 0  so (0 + 1) % 4 = 0
+            -- second  dirPtr = 1  so (1 + 1) % 4 = 2
+            -- third  dirPtr = 2  so (2 + 1) % 4 = 3
+            -- first  dirPtr = 3  so (3 + 1) % 4 = 0
+            
+*/

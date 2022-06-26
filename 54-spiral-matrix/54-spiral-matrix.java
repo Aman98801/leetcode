@@ -92,6 +92,6 @@ class Solution {
             -- first  dirPtr = 0  so (0 + 1) % 4 = 0
             -- second  dirPtr = 1  so (1 + 1) % 4 = 2
             -- third  dirPtr = 2  so (2 + 1) % 4 = 3
-            -- first  dirPtr = 3  so (3 + 1) % 4 = 0
+            -- forth  dirPtr = 3  so (3 + 1) % 4 = 0
             
 */

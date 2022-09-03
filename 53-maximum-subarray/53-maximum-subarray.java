@@ -1,5 +1,3 @@
-import java.util.Arrays; 
-
 class Solution {
     public int maxSubArray(int[] nums) {
         int max = nums[0];
@@ -8,8 +6,10 @@ class Solution {
         for(int i = 0; i < nums.length; i++){
             sum = sum + nums[i];
             
-            if(sum > max) max = sum;
-            if(sum < 0 ) sum = 0;
+            if(max < sum)
+                max = sum;
+            if(sum < 0)
+                sum = 0;
         }
         return max;
     }

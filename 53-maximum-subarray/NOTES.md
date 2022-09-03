@@ -19,3 +19,17 @@ globalMax = Math.max(globalMax,localMax);   // -2(i=0),1(i=1),1(i=2),4(i=3),4(i
 return globalMax;
 }
 }
+​
+​
+// 2nd Logic
+​
+public int maxSubArray(int[] nums) {
+int max = nums[0];
+int sum = 0;
+for(int i = 0; i < nums.length; i++){
+sum = sum + nums[i];
+if(sum > max) max = sum;
+if(sum < 0 ) sum = 0;
+}
+return max;
+}
